@@ -191,8 +191,8 @@ contract Dex {
             if (trade == Trade.SELL) {
                 traderBalances[msg.sender][symbol] = traderBalances[msg.sender][symbol].sub(matched);
                 traderBalances[msg.sender][DAI] = traderBalances[msg.sender][DAI].add(orders[i].price.mul(matched));
-                traderBalances[trader][symbol] = traderBalances[msg.sender][symbol].add(matched);
-                traderBalances[trader][DAI] = traderBalances[msg.sender][DAI].sub(orders[i].price.mul(matched));
+                traderBalances[trader][symbol] = traderBalances[trader][symbol].add(matched);
+                traderBalances[trader][DAI] = traderBalances[trader][DAI].sub(orders[i].price.mul(matched));
             }
 
             if (trade == Trade.BUY) {
@@ -201,8 +201,8 @@ contract Dex {
 
                 traderBalances[msg.sender][symbol] = traderBalances[msg.sender][symbol].add(matched);
                 traderBalances[msg.sender][DAI] = traderBalances[msg.sender][DAI].sub(orders[i].price.mul(matched));
-                traderBalances[trader][symbol] = traderBalances[msg.sender][symbol].sub(matched);
-                traderBalances[trader][DAI] = traderBalances[msg.sender][DAI].add(orders[i].price.mul(matched));
+                traderBalances[trader][symbol] = traderBalances[trader][symbol].sub(matched);
+                traderBalances[trader][DAI] = traderBalances[trader][DAI].add(orders[i].price.mul(matched));
             }
             nextTradeId = nextTradeId.add(1);
             i = i.add(1);
