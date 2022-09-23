@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/demora33/ERC20-DEX#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3",
-    "@openzeppelin/test-helpers": "^0.5.16"
+    "@daonomic/tests-common": "^0.2.2",
+    "@openzeppelin/contracts": "^4.7.3"
   }
 }
